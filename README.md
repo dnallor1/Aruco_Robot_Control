@@ -7,6 +7,7 @@ This project demonstrates a ROS2-based robot control system. The robot's movemen
 - **Camera Integration**: Uses the `usb_cam` package to capture the video feed from a laptop or external camera.
 - **ArUco Marker Detection**: Detects markers in the video feed and extracts their IDs and positions.
 - **Robot Control**: Moves the robot based on the detected ArUco marker's position (see `camera_subscriber.py`).
+- **Turtlesim Simulation**: Provides a simple robot simulation environment for testing purposes.
 - **Gazebo Simulation**: Simulates the robot's environment for testing and visualization.
 
 ## Team
@@ -20,9 +21,10 @@ GitHub: [dnallor1/Aruco_Robot_Control](https://github.com/dnallor1/Aruco_Robot_C
 
 ## Requirements
 
-- Gazebo
-- `usb_cam` ROS2 package
-- OpenCV (for ArUco marker detection)
+- turtlesim: For testing robot movements in a simple simulated environment.
+- Gazebo: For advanced robot simulations and testing.
+- `usb_cam` ROS2 package: To capture video feed from a USB camera.
+- OpenCV: For ArUco marker detection in the camera feed.
 
 ## Installation
 
@@ -43,6 +45,7 @@ GitHub: [dnallor1/Aruco_Robot_Control](https://github.com/dnallor1/Aruco_Robot_C
    sudo apt install ros-<ros2-distro>-usb-cam
    sudo apt install ros-<ros2-distro>-gazebo-ros
    sudo apt install python3-opencv
+   sudo apt install ros-<ros2-distro>-turtlesim
    ```
 
 ## Usage
@@ -65,7 +68,14 @@ Start the Gazebo simulation environment:
 ros2 launch aruco_marker_robot_control robot_sim.launch.py
 ```
 
-### 4. Run All Nodes with a Shell Script
+### 4. Run turtlesim for Simulation
+Run the turtlesim simulation::
+```bash
+ros2 run turtlesim turtlesim_node
+ros2 run turtlesim turtle_teleop_key
+```
+
+### 5. Run All Nodes with a Shell Script
 Use the `start.sh` script to launch all nodes together:
 ```bash
 ./start.sh
