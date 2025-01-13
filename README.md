@@ -78,4 +78,6 @@ Ensure the script is executable:
 chmod +x start.sh
 ```
 ## Video Demonstration
-A recorded video demonstrating how the robot is controlled based on ArUco marker detection is available. Watch it below to see the system in action: Watch the demonstration video on YouTube
+A recorded video demonstrating how the robot is controlled based on ArUco marker detection is available. Watch it below to see the system in action:
+[Watch the demonstration video on YouTube](https://youtu.be/zk66Bs9RkVE)
+
