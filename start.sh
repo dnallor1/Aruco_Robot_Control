@@ -14,10 +14,6 @@ export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:`ros2 pkg prefix turtlebot3_gazebo`/
 echo "Launching TurtleBot3 Gazebo simulation in an empty world..."
 ros2 launch turtlebot3_gazebo empty_world.launch.py &
 
-# Launch teleoperation for controlling the robot via keyboard
-#echo "Launching TurtleBot3 teleoperation..."
-#ros2 run turtlebot3_teleop teleop_keyboard &
-
 # Launch the custom camera node for ArUco marker detection (replace with your custom node)
 echo "Launching custom camera node..."
 ros2 run camera_subscriber camera_node &
